@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>09vue</title>
+	<script src="../vue.js"></script>
+</head>
+<body>
+	<script>
+		//除了 data 属性，Vue 实例暴露了一些有用的实例属性与方法。它们都有前缀 $，以便与用户定义的属性区分开来
+		var data = { a: 1 }
+		var vm = new Vue({
+			el: '#example',
+			data: data
+		})
+		vm.$data === data;
+		vm.$el === document.getElementById('example');// => true
+		// $watch 是一个实例方法
+		vm.$watch('a',function(newValue,oldValue){
+		// 这个回调将在 `vm.a` 改变后调用
+		})
+	</script>
+</body>
+</html>

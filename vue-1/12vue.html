@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>12vue</title>
+	<script src="../vue.js"></script>
+</head>
+<body>
+	<div id="app" v-html="msg">
+	</div>
+</body>
+<script>
+	var app = new Vue({
+		el:'#app',
+		data: {
+			msg :'<li>123</li>'
+		}
+	})
+</script>
+</html>

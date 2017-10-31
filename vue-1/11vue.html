@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>11vue</title>
+	<script src="../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<span>Message: {{ msg }}</span>
+		<div v-once>Message:{{ msg }}</div>
+	</div>
+</body>
+<script>
+	var app = new Vue({
+		el:'#app',
+		data:{
+			msg: 'Hello Vue!'
+		}
+	})
+	app.msg = 'Hello React!';
+</script>
+</html>

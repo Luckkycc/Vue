@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>todos</title>
+	<script src="../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model='newItem'>
+		<button @click='add(newItem)'>添加</button>	
+		<h4>待办事项</h4>
+		<ul>
+			<li v-for='todo in todos'>{{ todo }}</li>
+		</ul>
+	</div>
+</body>
+<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			todos: [],
+			newItem: ''
+		},
+		methods:{
+			add: function(newItem) {
+				this.todos.push(newItem);
+				this.newItem = '';
+			}
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13vuetodolist</title>
+	<script src="../vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h3>todolist</h3>
+		<input type="text" @keyup.enter="login(newItem)" v-model='newItem'>
+		<ul v-for="todo in todos">
+			<li>{{ todo }}</li>
+		</ul>
+	</div>
+
+</body>
+<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			todos: [
+			
+			],
+			newItem:''	
+		},
+		methods: {
+			login: function(newItem){
+				this.todos.push(newItem);
+			}
+		}
+	})
+</script>
+</html>
